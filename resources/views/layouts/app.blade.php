@@ -25,7 +25,13 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    E-learning System @yield('admin_mark')
+                    <span style="font-size: 20px;">E-learning System</span>
+                    <span class="text-secondary text-small">
+                        @can('admin')
+                        |&nbsp;Admin
+                        @endcan
+                        @yield('subtitle')
+                    </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -54,14 +60,19 @@
                                <a class="nav-link" href="{{ action('HomeController@dashboard') }}">Dashboard</a>
                             </li>
                             <li class="nav-item dropdown mr-3">
-                               <a class="nav-link" href="{{ action('LessonController@lessonIndex') }}">Categories</a>
+                               <a class="nav-link" href="{{ action('LessonController@lessonIndex') }}">Category</a>
                             </li>
                             <li class="nav-item dropdown mr-3">
-                               <a class="nav-link" href="{{ action('ProfileController@index') }}">User list-for-user</a>
+                               <a class="nav-link" href="{{ action('ProfileController@index') }}">User list</a>
                             </li>
-                            <li class="nav-item dropdown mr-3">
-                               <a class="nav-link" href="{{ action('UserController@index') }}">User list-for-admin</a>
-                            </li>
+                            @can('admin')
+                                <li class="nav-item dropdown mr-3">
+                                    <a class="nav-link" href="{{ action('CategoryController@index') }}">Category (for Admin)</a>
+                                </li>
+                                <li class="nav-item dropdown mr-3">
+                                    <a class="nav-link" href="{{ action('UserController@index') }}">User list (for Admin)</a>
+                                </li>
+                            @endcan
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

@@ -2,7 +2,7 @@
 
 @section('title', 'Categories')
 
-@section('admin_mark', ' | Admin')
+@section('subtitle', ' | Category')
 
 @section('content')
 <div class="container">
