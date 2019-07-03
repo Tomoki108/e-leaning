@@ -4,6 +4,8 @@
     {{ 'Lesson | '. $category->title }}
 @endsection
 
+@section('subtitle', ' | Lesson')
+
 @section('content')
 <div class="container">
     <h3 class="mb-3">

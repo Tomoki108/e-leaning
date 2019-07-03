@@ -2,14 +2,11 @@
 
 @section('title', 'Categories')
 
-@section('admin_mark', ' | Admin')
+@section('subtitle', ' | Category')
 
 @section('content')
 <div class="container">
-    <h3 class="mb-5">
-        Categories
-        <a href="{{ action('CategoryController@add') }}"><button class="btn btn-primary float-right">Add new category</button></a>
-    </h3>
+    <a href="{{ action('CategoryController@add') }}"><button class="btn btn-primary float-left mb-3">Add new category</button></a>
     <section>
         <table class="table table-hover">
             <thead>

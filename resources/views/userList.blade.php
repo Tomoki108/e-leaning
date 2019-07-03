@@ -2,12 +2,13 @@
 
 @section('title', 'User list')
 
+@section('subtitle', ' | User list')
+
 @section('content')
     <div class="container">
-        <h3 class="mb-3">User list</h3>
         <div class="row">
             @foreach ($profile_users as $profile_user)
-                <div class="col-xs-6 col-sm-4 col-md-3 m-0 p-0 text-center float-left">
+                <div class="col-xs-6 col-sm-4 col-md-3 mt-2 p-0 text-center">
                     @if ($profile_user->avatar != NULL)
                         <img src="/storage/profile_images/{{ $profile_user->id }}.jpg" class="thumbnail_userlist">
                     @else
@@ -19,9 +20,9 @@
                     @if ($user->id === $profile_user->id)
                         <p><button class="btn btn-secondary w-50 mb-3">YOU</button></p>
                     @elseif ($user->relation($profile_user))
-                        <p><a href="{{ route('follow', ['profile_user' => $profile_user, 'user' => $user]) }}"><button class="btn btn-primary w-50 mb-3">FOLLOW</button></a></p>
+                        <p><a href="{{ route('follow', ['profile_user' => $profile_user, 'user' => $user]) }}"><button class="btn btn-primary w-50 mb-4">FOLLOW</button></a></p>
                     @else
-                        <p><a href="{{ route('unfollow', ['profile_user' => $profile_user, 'user' => $user]) }}"><button class="btn btn-primary w-50 mb-3 px-1">UNFOLLOW</button></a></p>
+                        <p><a href="{{ route('unfollow', ['profile_user' => $profile_user, 'user' => $user]) }}"><button class="btn btn-primary w-50 mb-4 px-1">UNFOLLOW</button></a></p>
                     @endif
                 </div>
             @endforeach

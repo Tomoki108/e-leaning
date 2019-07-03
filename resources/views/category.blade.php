@@ -2,9 +2,10 @@
 
 @section('title', 'Categories')
 
+@section('subtitle', ' | Category')
+
 @section('content')
 <div class="container">
-    <h3 class="mb-3">Categories</h3>
     <div class="row">
         @foreach($categories as $category)
             <div class="col-md-6 col-xs-12 p-3">

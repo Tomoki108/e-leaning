@@ -2,6 +2,8 @@
 
 @section('title', 'Profile | '. $profile_user->name)
 
+@section('subtitle', ' | Profile')
+
 @section('content')
 <div class="container">
     <div class="row">

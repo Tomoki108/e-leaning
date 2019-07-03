@@ -2,12 +2,11 @@
 
 @section('title', 'Categories')
 
-@section('admin_mark', ' | Admin')
+@section('subtitle', ' | User list')
 
 @section('content')
 <div class="container">
-    <h3 class="mb-5">Users</h3>
-    <section>
+    <section class="mt-3">
         <table class="table table-hover">
             <thead>
                 <tr><th>ID</th><th>User Name</th><th>Email</th><th>Action</th></tr>

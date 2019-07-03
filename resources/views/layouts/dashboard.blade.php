@@ -1,8 +1,8 @@
 @extends ('layouts.app')
 
-@section('admin_mark', ' | Dashboard')
-
 @section('title', 'Dashboard')
+
+@section('subtitle', ' | Dashboard')
 
 @section('content')
 <div class="container">
