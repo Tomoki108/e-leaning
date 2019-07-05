@@ -4,6 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="card mb-3">
+                <div class="card-header">Description</div>
+                <div class="card-body">
+                    <p>This website provides Japanese word e-learning service. You can take many Japanese word quizzes and the record will be stored. You can follow other users and share your activities on this website. I hope this website will help your Japanese learning :)</p>
+                    <h5><u>Credential for demo</u></h5>
+                    <p>E-Mail : shinonome81@gmail.com<br>Password : aaa111</p>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-header">Login</div>
 
@@ -40,23 +49,17 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" value="{{ old('remember') ? 'checked' : '' }}">
-
-                                    <label class="form-check-label" for="remember">
-                                        Remember Me
-                                    </label>
-                                </div>
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Login
+                                </button>
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
+                                <a href="{{ route('register') }}">Register</a>
+                                <span class="ml-2">|</span>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         Forgot Your Password?
