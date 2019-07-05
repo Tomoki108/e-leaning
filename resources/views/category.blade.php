@@ -14,8 +14,6 @@
                     <p>{{ $category->description }}</p>
                     @if(session()->get($category->title) === 'no contents')
                         <span class="mb-3 text-info">This lesson has no contents yet</span>
-                    @elseif(session()->get($category->title) === 'taken')
-                        <span class="mb-3 text-info">You have already taken this lesson</span>
                     @endif
                     <a class="mt-auto" href="{{ route('lessonAnswer', ['category' => $category->id, 'page_number' => 0, 'correct' => 0]) }}">
                         <button class="btn btn-primary w-25">Start</button>

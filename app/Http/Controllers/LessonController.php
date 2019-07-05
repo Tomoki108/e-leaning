@@ -31,12 +31,6 @@ class LessonController extends Controller
             session()->flash($category->title, 'no contents');
             return back();
         }
-
-        //In case that user has already taken the lesson.
-        if(count(User::find(Auth::id())->lessons->where('category_id', $category->id)) !== 0) {
-            session()->flash($category->title, 'taken');
-            return back();
-        }
     
         //For storing answers to array in session. Second condition is to help duplication by page reload.
         if(session()->get('result') == NULL) {
