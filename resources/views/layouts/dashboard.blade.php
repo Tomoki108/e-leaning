@@ -34,7 +34,7 @@
                     <button class="btn btn-primary w-75">Edit account</button>
                 </p></a>
                 <a href="{{ action('HomeController@wordsLearned', $user) }}">{{ $count_words_learned }} words learned</a>
-                <p class="colour-primary">{{ count($user->lessons()->get()) }} lessons Learned</p>
+                <p class="colour-primary">{{ count($user->lessons()->get()) }} lessons learned</p>
             </div>
         </div>
         
