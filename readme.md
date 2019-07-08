@@ -1,5 +1,7 @@
 # About
-This application is  about Japanese word e-learning. This is made for my laravel practice.
+* This application provides Japanese words e-learning service. This is made for my Laravel practice.
+* Note: Originally I was making this app as a training of a company that I've joined as a internship. (I've wrote all the code by myself, but thanksfully two senior employees did code review and testing.) After my internship was finished, I copied the original repository to this one (not using "fork" in case that they'll delete original one). I started this repository at July 3, 2019 and fixed minor things. 
+* Original repository: https://github.com/framgia/fph_fels_laravel_tomokinagata  
 
 # Functions
 ### Admin side
